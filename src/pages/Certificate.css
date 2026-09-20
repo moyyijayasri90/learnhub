@@ -1,0 +1,306 @@
+.certificate-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f1f5f9;
+}
+
+.premium-certificate {
+  position: relative;
+  max-width: 1100px;
+  min-height: 700px;
+  margin: 0 auto;
+  padding: 60px;
+
+  background: white;
+
+  border: 12px solid #172554;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+}
+
+.premium-certificate::before {
+  content: "";
+
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+
+  border: 3px solid #d4a017;
+
+  pointer-events: none;
+}
+
+.certificate-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.certificate-header h1 {
+  color: #172554;
+  font-size: 40px;
+  margin: 0;
+}
+
+.certificate-header p {
+  color: #64748b;
+  letter-spacing: 3px;
+}
+
+.learnhub-logo {
+  font-size: 50px;
+}
+
+.certificate-heading h2 {
+  color: #172554;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  letter-spacing: 4px;
+}
+
+.certificate-heading h3 {
+  color: #475569;
+  font-family: Georgia, serif;
+  letter-spacing: 5px;
+}
+
+.presented-text {
+  color: #64748b;
+  margin-top: 25px;
+}
+
+.student-name {
+  color: #b45309;
+  font-family: Georgia, serif;
+  font-size: 45px;
+  margin: 15px 0;
+}
+
+.gold-line {
+  width: 60%;
+  height: 3px;
+  background: #d4a017;
+  margin: auto;
+}
+
+.completion-text {
+  color: #475569;
+}
+
+.course-title {
+  color: #172554;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.course-description {
+  color: #64748b;
+}
+
+.certificate-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  padding: 20px 0;
+
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.certificate-info > div {
+  flex: 1;
+}
+
+.certificate-info span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.certificate-info strong {
+  color: #172554;
+}
+
+.completed {
+  color: green !important;
+}
+
+.certificate-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.verification,
+.signature,
+.motto {
+  flex: 1;
+}
+
+.signature-line {
+  width: 130px;
+  border-top: 1px solid #172554;
+  margin: auto;
+}
+
+.certificate-watermark {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 90px;
+  font-weight: bold;
+  color: rgba(23, 37, 84, 0.04);
+
+  pointer-events: none;
+}
+
+.verified-badge {
+  position: absolute;
+  right: 45px;
+  top: 45px;
+
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: #172554;
+  border: 5px solid #d4a017;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.verified-badge .star {
+  color: #f5d76e;
+}
+
+.verified-badge strong {
+  font-size: 10px;
+}
+
+.verified-badge span {
+  font-size: 7px;
+}
+
+.corner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-color: #d4a017;
+  border-style: solid;
+}
+
+.corner-top-left {
+  top: 25px;
+  left: 25px;
+  border-width: 4px 0 0 4px;
+}
+
+.corner-top-right {
+  top: 25px;
+  right: 25px;
+  border-width: 4px 4px 0 0;
+}
+
+.corner-bottom-left {
+  bottom: 25px;
+  left: 25px;
+  border-width: 0 0 4px 4px;
+}
+
+.corner-bottom-right {
+  bottom: 25px;
+  right: 25px;
+  border-width: 0 4px 4px 0;
+}
+
+.certificate-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* PRINT */
+
+@media print {
+
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  nav,
+  footer,
+  .certificate-actions {
+    display: none !important;
+  }
+
+  body {
+    margin: 0 !important;
+    background: white !important;
+  }
+
+  .certificate-page {
+    width: 297mm !important;
+    height: 210mm !important;
+    padding: 10mm !important;
+    margin: 0 !important;
+    background: white !important;
+  }
+
+  .premium-certificate {
+    width: 277mm !important;
+    height: 190mm !important;
+
+    min-height: 0 !important;
+
+    padding: 35px !important;
+
+    margin: auto !important;
+
+    border: 8px solid #172554 !important;
+
+    box-shadow: none !important;
+
+    overflow: hidden !important;
+  }
+
+  .certificate-header h1 {
+    font-size: 28px !important;
+  }
+
+  .certificate-heading h2 {
+    font-size: 30px !important;
+  }
+
+  .student-name {
+    font-size: 35px !important;
+  }
+
+  .course-title {
+    font-size: 22px !important;
+  }
+
+  .certificate-info {
+    margin-top: 15px !important;
+    padding: 10px !important;
+  }
+
+  .certificate-footer {
+    margin-top: 15px !important;
+  }
+}

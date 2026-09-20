@@ -1,0 +1,286 @@
+/* =========================
+   SETTINGS PAGE
+========================= */
+
+.settings-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: #f5f7fb;
+  transition: 0.3s;
+}
+
+.settings-card {
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+
+  background: #ffffff;
+  color: #212529;
+
+  border-radius: 15px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  transition: 0.3s;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.settings-header {
+  background: linear-gradient(
+    135deg,
+    #0d6efd,
+    #6610f2
+  );
+
+  color: white;
+
+  text-align: center;
+
+  padding: 30px 20px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  font-size: 34px;
+}
+
+.settings-header p {
+  margin: 8px 0 0;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+.settings-body {
+  padding: 35px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.settings-section {
+  margin-bottom: 35px;
+}
+
+.settings-section h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #212529;
+}
+
+
+/* =========================
+   ROW
+========================= */
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #dee2e6;
+}
+
+.settings-info h3 {
+  margin: 0 0 6px;
+
+  font-size: 17px;
+
+  color: #212529;
+}
+
+.settings-info p {
+  margin: 0;
+
+  font-size: 14px;
+
+  color: #6c757d;
+}
+
+
+/* =========================
+   SWITCH
+========================= */
+
+.switch {
+  position: relative;
+
+  width: 52px;
+  height: 28px;
+
+  flex-shrink: 0;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+
+  inset: 0;
+
+  background: #ccc;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.slider::before {
+  content: "";
+
+  position: absolute;
+
+  width: 22px;
+  height: 22px;
+
+  left: 3px;
+  top: 3px;
+
+  background: white;
+
+  border-radius: 50%;
+
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+  background: #0d6efd;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clear-button {
+  width: 100%;
+
+  padding: 12px;
+
+  background: white;
+
+  color: #dc3545;
+
+  border: 1px solid #dc3545;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  background: #dc3545;
+  color: white;
+}
+
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-button {
+  width: 100%;
+
+  padding: 13px;
+
+  background: #0d6efd;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =================================================
+   🌙 DARK MODE
+   IMPORTANT PART
+================================================= */
+
+.settings-page.dark {
+  background: #101010;
+}
+
+.settings-page.dark .settings-card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.settings-page.dark .settings-section h2 {
+  color: white;
+}
+
+.settings-page.dark .settings-info h3 {
+  color: white;
+}
+
+.settings-page.dark .settings-info p {
+  color: #bdbdbd;
+}
+
+.settings-page.dark .settings-row {
+  border-bottom: 1px solid #444;
+}
+
+.settings-page.dark .clear-button {
+  background: #1e1e1e;
+  color: #ff6b6b;
+  border-color: #ff6b6b;
+}
+
+.settings-page.dark .clear-button:hover {
+  background: #dc3545;
+  color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .settings-page {
+    padding: 25px 15px;
+  }
+
+  .settings-body {
+    padding: 25px 20px;
+  }
+
+  .settings-header h1 {
+    font-size: 28px;
+  }
+
+  .settings-row {
+    gap: 15px;
+  }
+}
